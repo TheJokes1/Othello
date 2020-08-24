@@ -4,11 +4,13 @@ h1{
 
 body {
     background-color: cornflowerblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
 }
 
 canvas {
     align-content: center;
-    margin: auto;
+    margin: auto; 
     display: block;
     position: absolute;
     top: 50;
@@ -38,8 +40,9 @@ div.rcorner.active {
 }
 
 div.instruct {
-    margin-top: 120px;
-    width: 150px;
+    padding: 10px;
+    margin-top: 100px;
+    width: 175px;
     border-width: thin;
     border-style: solid;
     background-color: rgb(209, 221, 238);
