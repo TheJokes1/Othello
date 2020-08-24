@@ -92,6 +92,12 @@ function othello() {
         ctx.fill();
     }
 
+
+    function nothing(){
+
+    }
+
+
     function updateStand(){
         // telt aantal stenen en het aantal witte en zwarte en geeft deze weer.
         aantalWitte = 0;
@@ -155,7 +161,7 @@ function othello() {
     }
     
     function geefCoordinates(event){
-        if (computerAanZet){return;} // enkel 'luisteren' naar een click als computer niet aan zet is.
+        if (computerAanZet){return;} // enkel luisteren naar een click als computer niet aan zet is.
         let x = event.pageX-canvas.offsetLeft;
         let y = event.pageY-canvas.offsetTop;
         let rij = Math.floor(y / grootte);
@@ -164,7 +170,7 @@ function othello() {
         if (isGeldigeZet(rij,kol)){
             doeZet(rij,kol,kleur);
             computerAanZet = true;
-            setTimeout(function(){computerDoetZet()}, 450);
+            setTimeout(function(){computerDoetZet()}, 1850);
         }
     }
 
@@ -310,7 +316,7 @@ function othello() {
             let rijTV = teVervangenStenen[i][0];
             let kolomTV = teVervangenStenen[i][1];
             stenen[rijTV][kolomTV] = kleur; // vervang in de array 'stenen' de veranderde kleuren op de juiste posities,
-            setTimeout(function(){tekenSteen(rijTV, kolomTV)}, 175); // en teken deze, dus één voor één.
+            setTimeout(function(){tekenSteen(rijTV, kolomTV)}, 550); // en teken deze, dus één voor één.
         }
     }
 }
