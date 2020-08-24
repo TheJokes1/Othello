@@ -1,8 +1,13 @@
+h1{
+    margin-left: 40%;
+}
+
 body {
     background-color: cornflowerblue;
 }
 
 canvas {
+    align-content: center;
     margin: auto;
     display: block;
     position: absolute;
@@ -40,4 +45,8 @@ div.instruct {
     background-color: rgb(209, 221, 238);
     border-radius: 15px;
     text-align: center;
+}
+
+.bold{
+    font-weight: bold;
 }
