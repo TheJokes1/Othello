@@ -15,6 +15,7 @@ function othello() {
     let aantalStenen = 1;
     let aantalWitte = 0;
     let aantalZwarte = 0;
+    let aantalWitteZetten = 0;
     var richting = [];
     var juisteRichting = []; 
     let teVervangenStenen = [];
@@ -93,11 +94,6 @@ function othello() {
     }
 
 
-    function nothing(){
-
-    }
-
-
     function updateStand(){
         // telt aantal stenen en het aantal witte en zwarte en geeft deze weer.
         aantalWitte = 0;
@@ -124,16 +120,8 @@ function othello() {
         }
         document.getElementById("aantalWit").innerText = "wit: " + aantalWitte;
         document.getElementById("aantalZwart").innerText = "zwart: " + aantalZwarte;
-        if ((aantalWitte + aantalZwarte) == 64){
-            if (aantalWitte > aantalZwarte){
-                alert("WIT WINT!")
-            }else{
-                if (aantalZwarte > aantalWitte){
-                    alert("ZWART WINT!")
-                }else{
-                    alert("GELIJKSPEL!");}
-            }
-        }
+        // if ((aantalWitte + aantalZwarte) == 64){
+        
     }
 
     function isEven(number){
@@ -170,12 +158,13 @@ function othello() {
         if (isGeldigeZet(rij,kol)){
             doeZet(rij,kol,kleur);
             computerAanZet = true;
-            setTimeout(function(){computerDoetZet()}, 1850);
+            setTimeout(function(){computerDoetZet()}, 850);
         }
     }
 
     function computerDoetZet(){
         //alert("pauze");
+        aantalWitteZetten++;
         let kleur= isEven(aantalStenen) ? wit : zwart;  
         juisteZetten.length = 0; 
         for (let i = 0;i < legePosities.length;i++){ //ga alle lege posities na....
@@ -214,8 +203,25 @@ function othello() {
         raaktAanSteen(rij,kol); // op deze 'beste' positie kijken we dan weer de stenen die moeten vervangen worden
         console.log("computer doet zet");
         doeZet(rij,kol,kleur);
+
+        if (aantalWitteZetten == 30){
+            setTimeout(WeHaveAWinner(),8000);
+        
+        }
     }
 
+    function WeHaveAWinner(){
+        if (aantalWitte > aantalZwarte){
+            // alert("WIT WINT!")
+            setTimeout(function(){ alert("Wit Wint"); }, 1000);
+        }else{
+            if (aantalZwarte > aantalWitte){
+                setTimeout(function(){ alert("Zwart Wint"); }, 1000);
+            }else{
+                setTimeout(function(){ alert("Gelijkspel"); }, 1000);
+            }
+        }
+    }
 
     function doeZet(rij,kol,kleur){
         stenen[rij][kol] = kleur;
