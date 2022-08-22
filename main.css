@@ -11,10 +11,10 @@ body {
 canvas {
     margin: auto; 
     display: block;
-    position: absolute;
+    position: fixed;
     top: 50;
     bottom: 0;
-    left: 0;
+    left: 150px;
     right: 0;
 }
 
