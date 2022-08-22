@@ -9,7 +9,6 @@ body {
 }
 
 canvas {
-    align-content: center;
     margin: auto; 
     display: block;
     position: absolute;
