@@ -221,6 +221,9 @@ function othello() {
                 setTimeout(function(){ alert("Gelijkspel"); }, 1000);
             }
         }
+        initialiseer();
+        tekenBord();
+        updateStand();
     }
 
     function doeZet(rij,kol,kleur){

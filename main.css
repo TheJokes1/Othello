@@ -1,5 +1,7 @@
 h1{
-    margin-left: 40%;
+    /* margin-left: 40%; */
+    display: flex;
+    margin-left: 180px;
 }
 
 body {
@@ -9,40 +11,54 @@ body {
 }
 
 canvas {
-    margin: auto; 
-    display: block;
-    position: absolute;
+    /* margin: auto;  */
+    /* display: block; */
+    /* position: absolute; */
     top: 50px;
     bottom: 0;
     left: 200px;
     right: 0;
+    
+    display: flex;
+    align-items: center;
 }
 
 p.border {
     border-style: solid;
     border-width: medium;
 }
+
+.scores {
+    display: flex;
+    width: 480px;
+    align-items: center;
+    margin: 5px;
+}
     
-div.rcorner {
-    margin: 70px 1px 30px 0px;
+span.rcorner {
+    /* margin: 70px 1px 30px 100px; */
+    margin: auto;
     padding: 6px;
-    text-align: center; 
+    /* align-items: center; */
+    /* text-align: center;  */
     background-color: lightsteelblue;
     border-style: solid;
     border-width: thin ;
     border-radius: 15px;
-    width: 175px;
-    height: 22px;    
+    /* width: 175px; */
+    /* height: 22px;     */
 }
     
-div.rcorner.active {
-    background-color: white;   
-}
+/* span.rcorner.active {
+    background-color: white; 
+    align-items: center;  
+} */
 
 div.instruct {
     padding: 10px;
-    margin-top: 100px;
-    width: 170px;
+    margin-top: 10px;
+    margin-left: 45px;
+    width: 374px;
     border-width: thin;
     border-style: solid;
     background-color: rgb(209, 221, 238);
